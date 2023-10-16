@@ -1,72 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bir Şirket Sitesi!</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Bangers|Titillium+Web"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bir Şirket Sitesi!</title>
-  <link href="https://fonts.googleapis.com/css?family=Bangers|Titillium+Web" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </nav>
+        <img id="logo-img" class="logo" alt="Bir Şirket Sitesi logo" />
+      </header>
+      <section class="cta">
+        <div class="cta-text">
+          <h1></h1>
+          <button></button>
+        </div>
+        <img id="cta-img" alt="Bir kod parçası resmi" />
+      </section>
+      <section class="main-content">
+        <div class="top-content">
+          <div class="text-content">
+            <h4></h4>
+            <p></p>
+          </div>
+          <div class="text-content">
+            <h4></h4>
+            <p></p>
+          </div>
+        </div>
+        <img
+          class="middle-img"
+          id="middle-img"
+          alt="Ekran boyunca bir kod parçası resmi"
+        />
+        <div class="bottom-content">
+          <div class="text-content">
+            <h4></h4>
+            <p></p>
+          </div>
+          <div class="text-content">
+            <h4></h4>
+            <p></p>
+          </div>
+          <div class="text-content">
+            <h4></h4>
+            <p></p>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <h4></h4>
+        <p></p>
+        <p></p>
+        <p></p>
+      </section>
+      <footer>
+        <a href="#"></a>
+      </footer>
+    </div>
 
-<body>
-  <div class="container">
-    <header>
-      <nav>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-      </nav>
-      <img id="logo-img" class="logo" alt="Bir Şirket Sitesi logo">
-    </header>
-    <section class="cta">
-      <div class="cta-text">
-        <h1></h1>
-        <button></button>
-      </div>
-      <img id="cta-img" alt="Bir kod parçası resmi">
-    </section>
-    <section class="main-content">
-      <div class="top-content">
-        <div class="text-content">
-          <h4></h4>
-          <p></p>
-        </div>
-        <div class="text-content">
-          <h4></h4>
-          <p></p>
-        </div>
-      </div>
-      <img class="middle-img" id="middle-img" alt="Ekran boyunca bir kod parçası resmi">
-      <div class="bottom-content">
-        <div class="text-content">
-          <h4></h4>
-          <p></p>
-        </div>
-        <div class="text-content">
-          <h4></h4>
-          <p></p>
-        </div>
-        <div class="text-content">
-          <h4></h4>
-          <p></p>
-        </div>
-      </div>
-    </section>
-    <section class="contact">
-      <h4></h4>
-      <p></p>
-      <p></p>
-      <p></p>
-    </section>
-    <footer>
-      <a href="#"></a>
-    </footer>
-  </div>
-</body>
+    <script>
+      
 
+      let aLar = document.querySelectorAll(".container>header>nav>a");
+      const arr = ["Servisler","Ürünler","Vizyon","Özellikler","Hakkımızda","İletişim"];
+      for (let i = 0; i < aLar.length; i++) {
+        aLar[i].className = "italic";
+        aLar[i].textContent=arr[i];
+      }
+
+      let i = document.querySelector("img");
+      i.setAttribute("src", "../mocks/img/logo.png");
+
+      let h = document.querySelector(".cta-text > h1");
+      h.textContent = "Bu DOM Mükemmel";
+
+      let b = document.querySelector(".cta-text>button");
+      b.textContent = "Başlayın";
+
+      let tc = document.querySelector(
+        ".main-content>.top-content>.text-content>h4"
+      );
+      tc.textContent = "Özellikler";
+      document.querySelector(
+        ".main-content>.top-content>.text-content>p"
+      ).textContent =
+        "Özellikler içeriği elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+      let sc = document.querySelectorAll(
+        ".main-content>.top-content>.text-content"
+      )[1];
+      sc.querySelector("h4").textContent = "Hakkında";
+      sc.querySelector("p").textContent =
+        "Hakkında içeriği elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+      let im = document.getElementById("middle-img");
+      im.setAttribute("src", "../mocks/img/accent.png");
+
+      const abc = document.querySelectorAll(".bottom-content>.text-content")[0];
+      abc.querySelector("h4").textContent = "Servisler";
+      abc.querySelector("p").textContent =
+        "Servisler içeriği elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+      let md = document.querySelectorAll(".bottom-content>.text-content")[1];
+      md.querySelector("h4").textContent = "Ürünler";
+      md.querySelector("p").textContent =
+        "Ürünler içeriği elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+      const ls = document.querySelectorAll(".bottom-content>.text-content")[2];
+      ls.querySelector("h4").textContent = "Vizyon";
+      ls.querySelector("p").textContent =
+        "Vizyon içeriği elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.";
+
+
+      const bt= document.querySelector(".contact>h4");  
+      bt.textContent="İletişim";
+
+      const lst = document.querySelectorAll(".contact>p");
+      lst[0].textContent= "100 numara Bilmem ne sokak Ankara'da bir semt, Türkiye";
+      lst[1].textContent="+90 (123) 456-7899";
+      lst[2].textContent="satis@birsirketsitesi.com.tr";
+
+      document.querySelector("footer>a").className="bold";
+      document.querySelector("footer>a").textContent="Copyright Bir Şirket Sitesi 2022";
+    </script>
+  </body>
 </html>
