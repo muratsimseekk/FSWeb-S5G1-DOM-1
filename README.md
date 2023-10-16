@@ -47,3 +47,4 @@ Tanımlanan nesnenin aşağısında gerekli DOM manipülasyonlarını gerçekle�
 
 * [ ] Sayfadaki img etiketlerinin `src` özniteliğini düzenleyerek doğru resimleri göstermesini sağlayın.
 * [ ] "src/index.js" sayfasındaki veri nesnesinin içindeki doğru resimlerin URL'lerini bulup,kullanın.
+
